@@ -1,0 +1,69 @@
+package graficos;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class PruebaCombo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MarcoCombo mimarco = new MarcoCombo();
+		
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}
+
+}
+
+
+class MarcoCombo extends JFrame {
+	
+	public MarcoCombo() {
+		
+		setVisible(true);
+		
+		setBounds(550, 300, 550, 400);
+		
+		LaminaCombo milamina = new LaminaCombo();
+		
+		add(milamina);
+		
+	}
+	
+}
+
+class LaminaCombo extends JPanel{
+	
+	public LaminaCombo() {
+		
+		setLayout(new BorderLayout() );
+		
+		texto = new JLabel("En un lugar de la mancha de cuyo nombre...");
+		
+		texto.setFont(new Font("Serif", Font.PLAIN, 20));
+		
+		add(texto, BorderLayout.CENTER);
+		
+		JPanel lamina_norte = new JPanel();
+		
+		micombo = new JComboBox();
+		
+		micombo.addItem("Serif");
+		micombo.addItem("SansSerif");
+		micombo.addItem("Monospaced");
+		micombo.addItem("Dialog");
+		
+		lamina_norte.add(micombo);
+		
+		add(lamina_norte, BorderLayout.NORTH);
+		
+		
+	}
+	
+	private JLabel texto;
+	
+	private JComboBox micombo;
+	
+	
+}

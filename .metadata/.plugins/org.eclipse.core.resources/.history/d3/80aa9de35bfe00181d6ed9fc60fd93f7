@@ -1,0 +1,54 @@
+package graficos;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.SwingConstants;
+
+public class MarcoSliders {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Frame_Sliders mimarco = new Frame_Sliders();
+		
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+		
+	}
+}
+
+
+class Frame_Sliders extends JFrame {
+	
+	public Frame_Sliders() {
+		
+		setVisible(true);
+		
+		setBounds(550, 300, 550, 400);
+		
+		Lamina_Sliders milamina = new Lamina_Sliders();
+		
+		add(milamina);
+		
+	}
+	
+}
+
+class Lamina_Sliders extends JPanel{
+	
+	public Lamina_Sliders() {
+		
+		JSlider control = new JSlider(SwingConstants.VERTICAL, 20, 100, 25);
+		
+		add(control);
+		
+	}
+	
+
+}
