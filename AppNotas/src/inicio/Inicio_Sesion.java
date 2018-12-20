@@ -26,9 +26,11 @@ import javax.swing.border.LineBorder;
 
 class MarcoSession extends JFrame{
 	
+	private Image icon;
+	
 	public MarcoSession() {
 			
-		setTitle("TODOs Juntos -Login de Usuario-");
+		setTitle("Notes N More");
 		
 		setBounds(600, 300, 400, 600);
 		
@@ -41,6 +43,17 @@ class MarcoSession extends JFrame{
 		setVisible(true);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		try {
+			icon = ImageIO.read(new File("img/icon.png"));
+			ImageIcon icono = new ImageIcon(icon);
+		}catch(IOException e) {
+			System.out.println("La imagen de icono no se encuentra");
+		}
+		
+		
+		setIconImage(icon);
 		
 	}
 	
@@ -77,7 +90,7 @@ class LaminaSession extends JPanel{
 	public void ponerImagen() {
 		
 		try {
-			icono_principal = ImageIO.read(new File("img/todosJuntos_logo.png"));
+			icono_principal = ImageIO.read(new File("img/notesnmore_pequeno.png"));
 			
 			ImageIcon icono = new ImageIcon(icono_principal);
 			
@@ -177,6 +190,7 @@ class LaminaSession extends JPanel{
 		add(btn_registrarse);
 		add(btn_iniciar_session);
 	}
+	
 	
 	private class DameTexto implements ActionListener{
 

@@ -1,0 +1,66 @@
+package graficos;
+
+import javax.swing.*;
+
+public class MarcoMenu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MenuFrame mimarco = new MenuFrame();
+		
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		mimarco.setVisible(true);
+		
+
+	}
+
+}
+
+class MenuFrame extends JFrame{
+	
+	public MenuFrame()
+	{
+		
+		setBounds(500, 300, 550, 400);
+		
+		MenuLamina milamina = new MenuLamina();
+		
+		add(milamina);
+		
+		setVisible(true);
+		
+	}
+	
+}
+
+class MenuLamina extends JPanel{
+	
+	public MenuLamina()
+	{
+		JMenuBar mibarra = new JMenuBar();
+		
+		JMenu archivo = new JMenu("Archivo");
+		JMenu edicion = new JMenu("Edición");
+		JMenu herramientas = new JMenu("Herramientas");
+		
+		JMenuItem guardar = new JMenuItem("Guardar");
+		JMenuItem guardar_como = new JMenuItem("Guardar Como");
+		
+		JMenuItem cortar = new JMenuItem("Cortar");
+		JMenuItem copiar = new JMenuItem("Copiar");
+		JMenuItem pegar = new JMenuItem("Pegar");
+		
+		JMenuItem generales = new JMenuItem("Generales");
+		
+		
+		mibarra.add(archivo);
+		mibarra.add(edicion);
+		mibarra.add(herramientas);
+		
+		add(mibarra);
+		
+	}
+	
+}

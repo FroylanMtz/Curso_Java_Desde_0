@@ -1,0 +1,31 @@
+package graficos;
+
+import java.awt.*;
+
+public class Procesador {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class MenuProcesador extends JFrame{
+	
+	public MenuProcesador()
+	{
+		
+	}
+	
+}
+
+class LaminaProcesador extends JPanel {
+	
+	public LaminaProcesador()
+	{
+		
+		
+	}
+	
+}
